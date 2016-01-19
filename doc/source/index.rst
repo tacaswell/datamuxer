@@ -3,21 +3,6 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-DataBroker and DataMuxer Documentation
-======================================
-
-Data Broker
------------
-
-Data Broker is a Python package that provdies a simple, user-friendly interface
-for retireving stored data and metadata. It retrieves data into memory as
-built-in Python data types and numpy arrays.
-
-Both simple and complex searches are supported. Convenience fucntions
-provide a simple way to handle tabular data and image sequences.
-  
-See the :ref:`api` for details.
-
 Data Muxer
 ----------
 
@@ -26,10 +11,42 @@ based on time. For example, readings taking asynchronously must be aligned --
 that is, assigned common bins in time -- before they can be plotted against
 each other.
 
-See the :ref:`api` for details.
+API reference
+=============
 
-.. toctree::
-   :maxdepth: 1
+.. currentmodule:: datamuxer
 
-   api
-   whats_new
+DataMuxer
++++++++++
+
+.. autosummary::
+   :toctree: generated/
+
+   DataMuxer
+   DataMuxer.bin_by_edges
+   DataMuxer.bin_on
+   DataMuxer.from_events
+   DataMuxer.to_sparse_dataframe
+
+
+.. autosummary::
+   :toctree: generated/
+
+   ColSpec
+
+Helpers
++++++++
+
+.. autosummary::
+   :toctree: generated/
+
+   dataframe_to_dict
+
+Exceptions
+++++++++++
+
+.. autosummary::
+   :toctree: generated/
+
+   BinningError
+   BadDownsamplerError
